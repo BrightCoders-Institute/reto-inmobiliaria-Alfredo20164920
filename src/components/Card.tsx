@@ -9,7 +9,7 @@ export default function Card() {
   return (
     <View style={styles.container}>
       <ImageContainer />
-      {/* <Details /> */}
+      <Details />
     </View>
   );
 }

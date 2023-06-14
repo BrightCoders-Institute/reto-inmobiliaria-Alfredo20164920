@@ -1,19 +1,21 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import Card from './src/components/Card'
 
 function App(): JSX.Element {
   return (
-    <SafeAreaView>
-      <Text>Hola mundo</Text>
+    <SafeAreaView style={styles.container}>
+      <Card />
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 30,
+    paddingVertical: 30,
+    fontFamily: 'Arial'
+  }
+})
 
 export default App;

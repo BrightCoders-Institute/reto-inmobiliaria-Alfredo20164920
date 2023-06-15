@@ -1,19 +1,34 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, Text} from 'react-native';
+import Card from './src/components/Card'
 
 function App(): JSX.Element {
   return (
-    <SafeAreaView>
-      <Text>Hola mundo</Text>
+    <SafeAreaView style={styles.container} >
+      <ScrollView style={styles.scroll}>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </ScrollView>
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  scroll: {
+    paddingHorizontal: 30,
+    fontFamily: 'Arial',
+  },
+  container: {
+  }
+})
 
 export default App;

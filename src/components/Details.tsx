@@ -5,21 +5,37 @@ import { faLocationDot, faBed, faBath, faMaximize } from '@fortawesome/free-soli
 import Service from './Service';
 import ButtonLike from './ButtonLike';
 
-export default function Details() {
+interface DetailsProps {
+  id: number,
+  name: string,
+  address: string,
+  number_rooms: number,
+  number_restrooms: number,
+  area: number,
+  cost_month: number,
+  rating: number,
+}
+
+interface propsType {
+  details: DetailsProps
+}
+
+export default function Details(props: propsType) {
+  const {name, address, number_rooms, number_restrooms, area, cost_month} = props.details;
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>The Willows</Text>
+      <Text style={styles.title}>{name}</Text>
       <View style={styles.containerLocation}>
         <FontAwesomeIcon icon={faLocationDot} />
-        <Text style={styles.subTitle}>3517 W. Gray St. Utica</Text>
+        <Text style={styles.subTitle}>{address}</Text>
       </View>
       <View style={styles.containerServices}>
-        <Service text={'3'} icon={faBed}/>
-        <Service text={'2'} icon={faBath}/>
-        <Service text={'230 ft'} icon={faMaximize}/>
+        <Service text={number_rooms.toString()} icon={faBed}/>
+        <Service text={number_restrooms.toString()} icon={faBath}/>
+        <Service text={`${area} ft`} icon={faMaximize}/>
       </View>
       <View style={styles.containerBottom}>
-        <Text style={styles.price}>$440/m</Text>
+        <Text style={styles.price}>${cost_month}/m</Text>
         <ButtonLike />
       </View>
     </View>

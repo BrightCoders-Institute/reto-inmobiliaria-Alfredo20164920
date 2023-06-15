@@ -5,11 +5,31 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Details from './Details';
 import ImageContainer from './ImageContainer';
 
-export default function Card() {
+interface RoomType {
+  id: number,
+  name: string,
+  address: string,
+  number_rooms: number,
+  number_restrooms: number,
+  area: number,
+  cost_month: number,
+  rating: number,
+}
+
+interface propsType {
+  hotel: RoomType
+}
+
+export default function Card(props: propsType) {
+  const {hotel} = props;
+  const {rating} = hotel;
+
+
+
   return (
     <View style={styles.container}>
-      <ImageContainer />
-      <Details />
+      <ImageContainer rating={rating}/>
+      <Details details={hotel} />
     </View>
   );
 }

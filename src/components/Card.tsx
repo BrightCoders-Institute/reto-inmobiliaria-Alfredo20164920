@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
@@ -18,9 +18,11 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'row',
-    backgroundColor: '#f5fdff',
+    // backgroundColor: '#f5fdff',
+    backgroundColor: '#ddf',
     padding: 20,
     borderRadius: 10,
+    marginVertical: 15,
   },
 });
 

@@ -1,20 +1,33 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, Text} from 'react-native';
 import Card from './src/components/Card'
 
 function App(): JSX.Element {
   return (
-    <SafeAreaView style={styles.container}>
-      <Card />
+    <SafeAreaView style={styles.container} >
+      <ScrollView style={styles.scroll}>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  scroll: {
     paddingHorizontal: 30,
-    paddingVertical: 30,
-    fontFamily: 'Arial'
+    fontFamily: 'Arial',
+  },
+  container: {
   }
 })
 

@@ -10,7 +10,7 @@ interface ServiceProps {
 export default function Service({text, icon}: ServiceProps) {
   return (
     <View style={styles.container}>
-      <FontAwesomeIcon style={styles.icon} icon={icon} size={18}/>
+      <FontAwesomeIcon style={styles.icon} icon={icon} size={18} testID='serviceTest'/>
       <Text style={styles.title}>{text}</Text>
     </View>
   )

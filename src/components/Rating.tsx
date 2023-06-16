@@ -3,11 +3,15 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-export default function Rating() {
+interface RatingsProps {
+  data: number,
+}
+
+export default function Rating(props: RatingsProps) {
   return (
     <View style={styles.container}>
       <FontAwesomeIcon icon={faStar} style={styles.icon}/>
-      <Text style={styles.number}>4.3</Text>
+      <Text style={styles.number}>{props.data}</Text>
     </View>
   )
 }

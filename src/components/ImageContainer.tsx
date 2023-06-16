@@ -8,8 +8,8 @@ interface imageContainerProps {
 
 export default function ImageContainer(props: imageContainerProps) {
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: 'https://images.pexels.com/photos/981916/pexels-photo-981916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }} style={styles.img} />
+    <View style={styles.container} testID='image-container-test'>
+      <Image testID='imageTest' source={{ uri: 'https://images.pexels.com/photos/981916/pexels-photo-981916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }} style={styles.img} />
       <Rating data={props.rating}/>
     </View>
   )

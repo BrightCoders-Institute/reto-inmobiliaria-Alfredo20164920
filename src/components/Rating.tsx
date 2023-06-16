@@ -9,8 +9,8 @@ interface RatingsProps {
 
 export default function Rating(props: RatingsProps) {
   return (
-    <View style={styles.container}>
-      <FontAwesomeIcon icon={faStar} style={styles.icon}/>
+    <View style={styles.container} testID='rating-component-test'>
+      <FontAwesomeIcon icon={faStar} style={styles.icon} testID='ratingIconTest'/>
       <Text style={styles.number}>{props.data}</Text>
     </View>
   )

@@ -23,10 +23,10 @@ interface propsType {
 export default function Details(props: propsType) {
   const {name, address, number_rooms, number_restrooms, area, cost_month} = props.details;
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID='details-test'>
       <Text style={styles.title}>{name}</Text>
       <View style={styles.containerLocation}>
-        <FontAwesomeIcon icon={faLocationDot} />
+        <FontAwesomeIcon icon={faLocationDot}/>
         <Text style={styles.subTitle}>{address}</Text>
       </View>
       <View style={styles.containerServices}>

@@ -5,8 +5,8 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 export default function ButtonLike() {
   return (
-    <View style={styles.container}>
-      <FontAwesomeIcon icon={faHeart} size={15} style={styles.icon}/>
+    <View style={styles.container} testID='buttonLike-component-test'>
+      <FontAwesomeIcon icon={faHeart} size={15} style={styles.icon} testID="heartIcon"/>
     </View>
   );
 }
